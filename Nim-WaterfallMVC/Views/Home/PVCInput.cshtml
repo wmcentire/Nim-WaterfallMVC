@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Player vs. Computer Input Page";
+}
+
+<div class="parent container d-flex justify-content-center align-items-center h-100">
+    <div class="row">
+        <div class="row">
+            <div class="btnContainer col-4">
+                <a asp-controller="Home" asp-action="Index">
+                    <img class="nimBtn" src="~/images/Nim-Button.png" width="50%" />
+                </a>
+                <a asp-controller="Home" asp-action="Index">
+                    <h2 class="btnText">Go Back</h2>
+                </a>
+            </div>
+            <div class="col-8"></div>
+        </div>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-8 d-flex justify-content-center">
+                <form asp-controller="Home" asp-action="Game" method="post">
+                    <div class="row">
+                        <label class="mb-4 fs-2" for="P1Name">Player 1 Name:</label><br />
+                        <input class="space-s w-100" type="text" name="P1Name" placeholder="Player 1 Name" required />
+                    </div>
+                    @*<div class="row space-xs"></div>
+                    <div class="row">
+                        <label class="mb-4 fs-2" for="P2Name">Player 2 Name:</label><br />
+                        <input class="space-s w-100" type="text" name="P2Name" placeholder="Player 2 Name" required />
+                    </div>*@
+                    <div class="row space-m"></div>
+                    <div class="row d-flex justify-content-center">
+                        <button class="w-50 pt-2 pb-2 rounded" type="button">Begin</button>
+                    </div>
+                    <div class="row space-m"></div>
+                </form>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+</div>
