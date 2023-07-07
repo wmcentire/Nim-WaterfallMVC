@@ -1,8 +1,59 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Main Menu Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="parent container d-flex justify-content-center align-items-center h-100">
+    <div class="row">
+        <div class="col d-flex align-items-center">
+            @*Nim Game Title*@
+            <div class="col-2"></div>
+            <div class="col-10">
+                <img src="~/images/Nim-Title.png" width="100%" />
+            </div>
+        </div>
+
+        <div class="col">
+            @*Player vs. Player Button*@
+            <div class="row mt-2 mb-2 text-center">
+                <div class="col"></div>
+                <div class="btnContainer col-6">
+                    <a asp-controller="Home" asp-action="PVPInput">
+                        <img class="nimBtn" src="~/images/Nim-Button.png" width="100%" />
+                    </a>
+                    <a asp-controller="Home" asp-action="PVPInput">
+                        <h2 class="btnText">Player vs. Player</h2>
+                    </a>
+                </div>
+                <div class="col-4"></div>
+            </div>
+
+            @*Player vs. Computer Button*@
+            <div class="row mt-2 mb-2 text-center">
+                <div class="col"></div>
+                <div class="btnContainer col-6">
+                    <a asp-controller="Home" asp-action="PVCInput">
+                        <img class="nimBtn" src="~/images/Nim-Button.png" width="100%" />
+                    </a>
+                    <a asp-controller="Home" asp-action="PVCInput">
+                        <h2 class="btnText">Player vs. Computer</h2>
+                    </a>
+                </div>
+                <div class="col-4"></div>
+            </div>
+
+            @*Rules Button*@
+            <div class="row mt-2 mb-2 text-center">
+                <div class="col"></div>
+                <div class="btnContainer col-6">
+                    <a asp-controller="Home" asp-action="Rule">
+                        <img class="nimBtn" src="~/images/Nim-Button.png" width="100%" />
+                    </a>
+                    <a asp-controller="Home" asp-action="Rule">
+                        <h2 class="btnText">Rules</h2>
+                    </a>
+                </div>
+                <div class="col-4"></div>
+            </div>
+        </div>
+    </div>
 </div>

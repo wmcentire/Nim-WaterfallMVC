@@ -1,18 +1,66 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    font-family: 'Fredericka the Great', cursive;
+    color: white;
+    text-shadow: 3px 3px 5px #000;
+    background-image: url('../images/Nim-Background.png');
+}
+
+/*Set container height to viewport*/
+.parent {
+    min-height: 100vh;
+}
+
+.space-l {
+    min-height: 20vh;
+}
+
+.space-m {
+    min-height: 10vh;
+}
+
+.space-s {
+    min-height: 7vh;
+}
+
+.space-xs {
+    min-height: 3vh;
+}
+
+.btnContainer {
+    position: relative;
+    text-align: center;
+}
+
+/*Center text on top of button image*/
+.btnText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.btnText:hover {
+    cursor: pointer;
+    color: black;
+}
+
+/*Change button color on hover*/
+.nimBtn:hover {
+    content: url('../images/Nim-ButtonHighlighted.png');
 }
