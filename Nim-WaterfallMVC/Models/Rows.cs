@@ -22,5 +22,15 @@
             }
             return false;
         }
+
+        public int matchCount()
+        {
+            int lit = 0;
+            for(int i = 0; i < len; i++)
+            {
+                if (matches[i]) lit++;
+            }
+            return lit;
+        }
     }
 }
