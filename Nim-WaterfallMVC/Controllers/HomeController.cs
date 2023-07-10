@@ -7,7 +7,7 @@ namespace Nim_WaterfallMVC.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
+        private Board board;
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
@@ -33,7 +33,7 @@ namespace Nim_WaterfallMVC.Controllers
             return View();
         }
 
-        public IActionResult Game(string P1Name, string P2Name)
+        public IActionResult Game(string P1Name, string P2Name, int difficulty)
         {
             if (P2Name == null)
             {
