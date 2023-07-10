@@ -6,10 +6,12 @@
         Player[] players = new Player[2];
         int dif;
 
-        int chosenRow = 0;
+        int chosenRow = -1;
+
+        Rows[] rows;
 
         bool playerHasWon = false;
-        Player winner;
+        Player currentPlayer;
 
         public Board(string pl1Name, string pl2Name, int difficulty)
         {
@@ -19,12 +21,24 @@
             dif = difficulty;
         }
 
-        public string StartGame()
+        public void StartGame()
         {
-
-
-
-            return winner.Name;
+            rows = new Rows[dif];
+            foreach(Rows row in rows)
+            {
+                for(int i = 0; i < row.len; i++)
+                {
+                    row.matches[i] = true;
+                }
+            }
+            currentPlayer = players[turn];
         }
+
+        public void PassTurn()
+        {
+            turn++;
+        }
+
+
     }
 }

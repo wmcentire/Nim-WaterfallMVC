@@ -39,9 +39,8 @@ namespace Nim_WaterfallMVC.Controllers
             {
                 P2Name = "Computer";
             }
-
-            ViewBag.P1Name = P1Name;
-            ViewBag.P2Name = P2Name;
+            board = new Board(P1Name,P2Name,difficulty);
+            ViewBag.Game = board;
 
             return View();
         }
