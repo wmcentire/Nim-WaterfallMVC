@@ -73,7 +73,7 @@
             return false;
         }
         /// <summary>
-        /// 
+        /// removes matches from a given row
         /// </summary>
         /// <param name="rowIdx"></param>
         /// <param name="matchesRemoved"></param>
