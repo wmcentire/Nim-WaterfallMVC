@@ -81,6 +81,7 @@
         {
             for(int i = rows[rowIdx].len - rows[rowIdx].matchCount(); i < rows[rowIdx].len - rows[rowIdx].matchCount() + matchesRemoved; i++) // len - matches lit // 5 - 3 = 2
             {
+                if (i > rows[rowIdx].len) break;
                 rows[rowIdx].matches[i] = false;
             }
         }
