@@ -84,9 +84,7 @@
         {
             for (int i = rows[rowIdx].len - rows[rowIdx].matchCount(); i < rows[rowIdx].len - rows[rowIdx].matchCount() + matchesRemoved; i++) // Iterate over the matches to be removed
             {
-                // ensuring we dont go out of bounds 
-                if (i > rows[rowIdx].len) break;
-                rows[rowIdx].matches[i] = false; // Remove the matches from the row
+                rows[rowIdx].matches[i] = false;
             }
         }
     }
