@@ -28,7 +28,7 @@
             </div>
 
             @*Player vs. Computer Button*@
-            <div class="row mt-2 mb-2 text-center">
+            @*<div class="row mt-2 mb-2 text-center">
                 <div class="col"></div>
                 <div class="btnContainer col-6">
                     <a asp-controller="Home" asp-action="PVCInput">
@@ -39,7 +39,7 @@
                     </a>
                 </div>
                 <div class="col-4"></div>
-            </div>
+            </div>*@
 
             @*Rules Button*@
             <div class="row mt-2 mb-2 text-center">
@@ -50,6 +50,20 @@
                     </a>
                     <a asp-controller="Home" asp-action="Rule">
                         <h2 class="btnText">Rules</h2>
+                    </a>
+                </div>
+                <div class="col-4"></div>
+            </div>
+
+            @*Credits Button*@
+            <div class="row mt-2 mb-2 text-center">
+                <div class="col"></div>
+                <div class="btnContainer col-6">
+                    <a asp-controller="Home" asp-action="Credit">
+                        <img class="nimBtn" src="~/images/Nim-Button.png" width="100%" />
+                    </a>
+                    <a asp-controller="Home" asp-action="Credit">
+                        <h2 class="btnText">Credits</h2>
                     </a>
                 </div>
                 <div class="col-4"></div>

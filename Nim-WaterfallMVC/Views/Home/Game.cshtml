@@ -2,7 +2,58 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+    @model Board
+
+    ViewData["Title"] = "Game Page";
 }
 
-<h1>Player 1: @ViewBag.P1Name</h1>
-<h1>Player 2: @ViewBag.P2Name</h1>
+<div class="parent container d-flex justify-content-center align-items-center h-100">
+    <div class="col-2"></div>
+
+    <div class="col-6 ms-4 me-2">
+        <div class="row w-75">
+            <button id="row1Btn" class="gameBtn rounded" type="button" onclick="removeMatchRow1()">
+                <img id="match1" src="~/images/MatchStick_NoTip.png" height="75px" />
+            </button>
+        </div>
+        <div class="row space-xs"></div>
+
+        <div class="row w-75">
+            <button id="row2Btn" class="gameBtn rounded" type="button" onclick="removeMatchRow2()">
+                <img id="match2" src="~/images/MatchStick_NoTip.png" height="75px" />
+                <img id="match3" src="~/images/MatchStick_NoTip.png" height="75px" />
+                <img id="match4" src="~/images/MatchStick_NoTip.png" height="75px" />
+            </button>
+        </div>
+        <div class="row space-xs"></div>
+
+        <div class="row w-75">
+            <button id="row3Btn" class="gameBtn rounded" type="button" onclick="removeMatchRow3()">
+                <img id="match5" src="~/images/MatchStick_NoTip.png" height="75px" />
+                <img id="match6" src="~/images/MatchStick_NoTip.png" height="75px" />
+                <img id="match7" src="~/images/MatchStick_NoTip.png" height="75px" />
+                <img id="match8" src="~/images/MatchStick_NoTip.png" height="75px" />
+                <img id="match9" src="~/images/MatchStick_NoTip.png" height="75px" />
+            </button>
+        </div>
+        <div class="row space-xs"></div>
+
+        <div class="row w-75">
+            <button id="row4Btn" class="gameBtn rounded" type="button" onclick="removeMatchRow4()">
+                <img id="match10" src="~/images/MatchStick_NoTip.png" height="75px" />
+                <img id="match11" src="~/images/MatchStick_NoTip.png" height="75px" />
+                <img id="match12" src="~/images/MatchStick_NoTip.png" height="75px" />
+                <img id="match13" src="~/images/MatchStick_NoTip.png" height="75px" />
+                <img id="match14" src="~/images/MatchStick_NoTip.png" height="75px" />
+                <img id="match15" src="~/images/MatchStick_NoTip.png" height="75px" />
+                <img id="match16" src="~/images/MatchStick_NoTip.png" height="75px" />
+            </button>
+        </div>
+    </div>
+    <div class="col-2 d-flex justify-content-center ms-2 me-4">
+        <div class="row space-m w-100">
+            <button class="rounded" type="button" onclick="passTurn()">Pass Turn</button>
+        </div>
+    </div>
+    <div class="col-2"></div>
+</div>

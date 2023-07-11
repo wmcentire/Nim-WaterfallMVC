@@ -23,23 +23,24 @@ namespace Nim_WaterfallMVC.Controllers
             return View();
         }
 
-        public IActionResult PVCInput()
-        {
-            return View();
-        }
+        //public IActionResult PVCInput()
+        //{
+        //    return View();
+        //}
 
         public IActionResult Rule()
         {
             return View();
         }
 
+        public IActionResult Credit()
+        {
+            return View();
+        }
+
         public IActionResult Game(string P1Name, string P2Name, int difficulty)
         {
-            if (P2Name == null)
-            {
-                P2Name = "Computer";
-            }
-            board = new Board(P1Name,P2Name,difficulty);
+            board = new Board(P1Name,P2Name, difficulty);
             ViewBag.Game = board;
 
             return View();
