@@ -2,15 +2,15 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
-    @model Board
-
     ViewData["Title"] = "Game Page";
 }
+
+@model Board
 
 <div class="parent container d-flex justify-content-center align-items-center h-100">
     <div class="col-2"></div>
 
-    <div class="col-6 ms-4 me-2">
+    <div class="col-5 ms-4 me-2">
         <div class="row w-75">
             <button id="row1Btn" class="gameBtn rounded" type="button" onclick="removeMatchRow1()">
                 <img id="match1" src="~/images/MatchStick_NoTip.png" height="75px" />
@@ -50,9 +50,16 @@
             </button>
         </div>
     </div>
-    <div class="col-2 d-flex justify-content-center ms-2 me-4">
-        <div class="row space-m w-100">
-            <button class="rounded" type="button" onclick="passTurn()">Pass Turn</button>
+    <div class="col-3 d-flex justify-content-center ms-2 me-4">
+        <div class="row">
+            <div class="row">
+                <h1 @*id="turnPlayerName"*@ class="text-center">@ViewBag.P1Name's Turn</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="row space-m">
+                <button class="rounded" type="button" onclick="passTurn()">Pass Turn</button>
+            </div>
         </div>
     </div>
     <div class="col-2"></div>

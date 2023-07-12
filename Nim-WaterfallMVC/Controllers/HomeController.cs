@@ -52,6 +52,16 @@ namespace Nim_WaterfallMVC.Controllers
             board = new Board(P1Name, P2Name, difficulty); // Create a new game board
             ViewBag.Game = board; // Pass the board to the view
 
+            if (P1Name == null)
+            {
+                ViewBag.P1Name = "Player 1";
+            }
+
+            if (P2Name == null)
+            {
+                ViewBag.P2Name = "Player 2";
+            }
+
             return View();
         }
 

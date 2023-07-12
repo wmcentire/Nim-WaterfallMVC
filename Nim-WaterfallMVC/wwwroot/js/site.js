@@ -43,6 +43,11 @@ matchImg14.style.visibility = "visible";
 matchImg15.style.visibility = "visible";
 matchImg16.style.visibility = "visible";
 
+const turnPlayerName = document.getElementById("turnPlayerName");
+turnPlayerName.textContent = "Player 1's turn";
+
+/*const p1Turn = true;*/
+
 function passTurn() {
     row1Btn.disabled = false;
     row2Btn.disabled = false;
@@ -51,22 +56,29 @@ function passTurn() {
 
     if (matchImg1.style.visibility == "hidden") {
         row1Btn.disabled = true;
-
     }
 
     if (matchImg4.style.visibility == "hidden") {
         row2Btn.disabled = true;
-
     }
 
     if (matchImg9.style.visibility == "hidden") {
         row3Btn.disabled = true;
-
     }
 
     if (matchImg16.style.visibility == "hidden") {
         row4Btn.disabled = true;
     }
+
+    //if (p1Turn == true) {
+    //    turnPlayerName.textContent = "Player 1's turn";
+    //    p1Turn == false;
+    //}
+
+    //if (p1Turn == false) {
+    //    turnPlayerName.textContent = "Player 2's turn";
+    //    p1Turn == true;
+    //}
 }
 
 function removeMatchRow1() {
